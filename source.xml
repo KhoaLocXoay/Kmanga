@@ -676,6 +676,17 @@ img{vertical-align:middle;}
  60%{opacity:1 }
  to{transform:none }
 }
+/* Sử dụng các lớp CSS được định nghĩa sẵn */
+
+/* Tạo lớp CSS tùy chỉnh */
+.sakura-custom {
+  position: absolute;
+  left: -10%;
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .row{display:flex;justify-content:space-between;align-items:center;}
 .entry{position:relative;transition:.15s;}
 .entry .cover{display:none;max-width:0;min-width:0;padding:0;width:0;}
@@ -1697,6 +1708,8 @@ $(widget).remove();
 }
 }
 //]]></script>
+    <script src='https://cdn.jsdelivr.net/npm/sakura.js@2.2.0/dist/sakura.min.js'/>
+
     &lt;!--</head>--&gt;&lt;/head&gt;
   <body id='modeSwitch'>
     <b:class cond='data:view.isPost' name='pv'/>
@@ -1705,6 +1718,7 @@ $(widget).remove();
     <b:class cond='data:view.isSearch and !data:view.isLabelSearch' name='svo'/>
     <b:class cond='data:view.isPage' name='p'/>
     <script>/*<![CDATA[*/ (localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#modeSwitch').classList.add('dark-mode') : document.querySelector('#modeSwitch').classList.remove('dark-mode') /*]]>*/</script>
+<div id='sakura'/>
 
     <b:with value='[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0-9&quot;]' var='Alphabet'>
       <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Comedy&quot;,&quot;Crime&quot;,&quot;Drama&quot;,&quot;Fantasy&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;Isekai&quot;,&quot;Magical Girls&quot;,&quot;Mecha&quot;,&quot;Medical&quot;,&quot;Mystery&quot;,&quot;Philosophical&quot;,&quot;Psychological&quot;,&quot;Romance&quot;,&quot;Sci-Fi&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Sports&quot;,&quot;Superhero&quot;,&quot;Thriller&quot;,&quot;Tragedy&quot;,&quot;Wuxia&quot;,&quot;Yaoi&quot;,&quot;Yuri&quot;,&quot;Tsundere&quot;,&quot;Yandere&quot;]' var='Genre'>
@@ -1775,7 +1789,7 @@ $(widget).remove();
                           </b:widget>
                           <b:widget id='PageList1' locked='true' title='Pages' type='PageList' version='2' visible='true'>
                             <b:widget-settings>
-                              <b:widget-setting name='pageListJson'><![CDATA[{"link1":{"href":"#","position":1,"title":"Fanpage"},"link0":{"href":"#","position":0,"title":"Đăng Truyện"}}]]></b:widget-setting>
+                              <b:widget-setting name='pageListJson'><![CDATA[{"link1":{"href":"#","position":1,"title":"Fanpage"},"link0":{"href":"#","position":0,"title":"Đăng Truyện"},"link2":{"href":"#","position":2,"title":"Admin Necakco"}}]]></b:widget-setting>
                               <b:widget-setting name='homeTitle'>Trang chủ</b:widget-setting>
                             </b:widget-settings>
                             <b:includable id='main'>
@@ -3163,7 +3177,7 @@ https://cararegistrasi.com/zeistmanga
                                     <article>
                                       <h2 class='fs-15'>Bạn đang Xem thông tin Truyện - <data:post.title/></h2>
                                       <div id='syn-target'/>
-                                      <p class='fs-14'>Baca Komik <strong><data:post.title/></strong> bahasa Indonesia lengkap dan baru di <strong><data:blog.title/></strong>. Kami menyediakan Komik, Manhua, Manhwa, dan Novel yang dapat kalian baca online gratis. </p>   
+                                      <p class='fs-14'>Đọc Truyện <strong><data:post.title/></strong> tại <strong><data:blog.title/></strong>. </p>   
                                     </article>
 
                                   </div>                               
@@ -5825,6 +5839,7 @@ Genre
         </b:with>
       </b:with>
     </b:with>
+<audio autoplay='' src='https://cdn.discordapp.com/attachments/1102627831378366644/1102627900685029498/y2mate.com_-_Zelda_Chill_Ocarina_of_Time_Mikel_Lofi_Remix_mp3cut.net.mp3'/>
     <script async='async' defer='defer' src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'>
     new Crate({
         server: &#39;1094821561783042130&#39;, // KVManga
@@ -6328,4 +6343,15 @@ if(list.length<limitBookmark){
      //]]></script>
      </b:if>
     &lt;!--</body>--&gt;&lt;/body&gt;
+  <script>
+  var sakura = new Sakura(&#39;body&#39;, {
+    colors: [
+      &#39;#ff7f7f&#39;,
+      &#39;#ffbfff&#39;,
+      &#39;#ff9f9f&#39;,
+      &#39;#ffc0cb&#39;
+    ]
+  });
+</script>
+
 </html>
